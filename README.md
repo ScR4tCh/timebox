@@ -13,11 +13,13 @@ This means, that no answers from the box will be processed at the moment.
 * display clock and set 12h/24h format as well as color. There are a dozen of possebilities to describe a color, take a look at [colour](https://github.com/vaab/colour)
 * display temperature set °C/°F as well as the color
 * switch radio on/off
+* setting time
 
 ## What does not work (or needs improvements)
 * Setting the radios frequency does not yet work
 * animations with a shorter framelength "as usual" (I am about to investigate this) might be "glued together" resulting in two or more animations shown after each other
 * Error handling is bad at the moment, so be careful what you type. The CLI might not inform you about what went wrong yet.
+* Python3 support
 * ... Documentation ;) ...
 * ... No Tests, only tested on my Linux boxes ...
 
@@ -25,3 +27,4 @@ This means, that no answers from the box will be processed at the moment.
 * split CLI and library
 * support text "rendering" and marquees
 * support everything that could be done using the "original" android app
+* web server providing a timebox api
