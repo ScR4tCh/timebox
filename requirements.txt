@@ -1,4 +1,6 @@
 click
+click-spinner
 colour
 pillow
-
+appdirs
+dateutil
