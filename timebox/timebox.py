@@ -57,7 +57,8 @@ class Timebox:
             self.addr, _ = self.sock.getpeername()
         else:
             self.sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-        self.addr = target
+            self.addr = target
+            self.sock.connect((self.addr, 4))
 
     def connect(self):
         if(not self.sock):
@@ -528,9 +529,9 @@ def settime(ctx, date):
 @click.pass_context
 def raw(ctx, hexbytes, _mask):
     if (_mask):
-        ctx.obj['dev'].send(mask(unhexlify(hexbytes)))
+        ctx.obj['dev'].send(bytearray(mask(unhexlify(hexbytes))))
     else:
-        ctx.obj['dev'].send(unhexlify(hexbytes))
+        ctx.obj['dev'].send(bytearray(unhexlify(hexbytes)))
 
 
 def connect(target, debug):
