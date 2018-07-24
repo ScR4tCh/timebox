@@ -158,7 +158,7 @@ def cli(ctx, address, debug, disconnect):
 
     if (not address):
         if(not os.path.exists(CONFDIR)):
-            os.mkdir(CONFDIR)
+            os.makedirs(CONFDIR)
 
         if(os.path.exists(CONFFILE)):
             with open(CONFFILE, 'r') as f:
