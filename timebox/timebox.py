@@ -542,6 +542,7 @@ def connect(target, debug):
 
 
 if __name__ == '__main__':
-    dev, disconnect = cli(obj={})
+    import sys
+    dev, disconnect = cli(sys.argv[1:], obj={})
     if (disconnect):
         dev.disconnect()
