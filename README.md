@@ -23,6 +23,11 @@ This means, that no answers from the box will be processed at the moment.
 * ... Documentation ;) ...
 * ... No Tests, only tested on my Linux boxes ...
 
+## Windows integration
+To use this library on Windows, you need to install a version of the [pybluez](https://github.com/pybluez/pybluez)
+library that contains a fix for [getpeername support](https://github.com/pybluez/pybluez/pull/201).
+A pre-built binary for the library supporting Python 2.7 and AMD64 can be downloaded [here](https://1drv.ms/u/s!AtLn8ELpA_G9frRzQuMKJ1QixKw).
+
 ## Future plans
 * split CLI and library
 * support text "rendering" and marquees
